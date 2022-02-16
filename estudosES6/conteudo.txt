@@ -1,0 +1,264 @@
+/* class Pessoa{
+    constructor(){
+       this.nome = ''
+       this.idade = 0
+        
+    }
+    add(data){
+        this.lista.push(data)
+    }
+}
+
+class Homem extends Pessoa{
+    constructor(){
+        super()
+        this.sexo = 'H'
+
+    }
+}
+
+class Mulher extends Pessoa{
+    constructor(){
+        super()
+        this.sexo = 'M'
+    }
+
+}
+
+var homem1 = new Homem()
+
+homem1.idade = 10
+homem1.nome = 'joao'
+homem1.sexo = 'H'
+
+var mulher1 = new Mulher()
+
+mulher1.idade = 10
+mulher1.nome = 'Maria'
+mulher1.sexo = 'H'
+
+console.log(homem1,mulher1)
+
+//desetruturacao 
+
+const {nome, idade} = homem1
+
+
+console.log(nome, idade)
+
+//ex1
+
+class Admin{
+    constructor(email,senha){
+        this.email = email
+        this.senha = senha
+       
+    }
+
+    isAdm(){
+        return true
+    }
+}
+
+class Usuario extends Admin{
+    constructor(){
+        super()
+       
+    }
+
+    isAdm(){
+        return false
+    }
+}
+
+const user1 = new Usuario('email@email', 'senha.senha')
+const adm1 = new Admin('email@email', 'senha.senha')
+
+console.log('ex1-------------------------')
+console.log(adm1.isAdm())
+console.log(user1.isAdm())
+console.log('ex1-------------------------')
+
+//ex2
+console.log('ex2-------------------------')
+
+const usuarios = [
+    { nome: 'Diego', idade: 23, empresa: 'Rocketseat' },
+    { nome: 'Gabriel', idade: 15, empresa: 'Rocketseat' },
+    { nome: 'Lucas', idade: 30, empresa: 'Facebook' },
+   ];
+
+//2.1
+
+   const map = usuarios.map(item => item.idade)
+
+   console.log(map)
+//2.2
+
+   const filter = usuarios.filter(item => item.empresa === 'Rocketseat')
+
+   console.log(filter)
+
+//2.3
+
+   const find = usuarios.find(item => item.empresa === 'google')
+
+   console.log(find)
+
+//2.4
+
+   const arr = usuarios.map(item => {
+        let idade = item.idade * 2
+        let novoItem = {
+            ...item,
+            idade
+        }
+
+        return novoItem
+   })
+
+   const arr1 = arr.filter(item => item.idade <= 50)
+   console.log(arr1)
+
+   console.log('ex2-------------------------')
+
+   console.log('ex4-------------------------')
+
+   const empresa = {
+    name: 'Rocketseat',
+    endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC',
+    }
+   };
+
+   const { name, endereco:{cidade,estado}} = empresa
+
+    console.log(name)
+    console.log(cidade)
+    console.log(estado)
+
+    console.log(`o nome da empres eh ${name} moro em ${cidade} que fica em ${estado}`)
+   
+    console.log('ex4-------------------------')
+
+
+
+    console.log('rest-------------------------')
+
+        const rest = {
+            ...empresa,
+            rest: 20
+        }
+
+        console.log(rest)
+
+    console.log('ex7-------------------------')
+
+    //import x export 
+
+import {contador} from '../global'
+
+
+console.log(contador)
+
+function espere(){
+    return new Promise((resolve)=>{
+        setTimeout(()=> {resolve('ok')},3000)
+    })
+   
+}
+
+async function execPromise(){
+    
+    console.log(await espere())
+   
+}
+
+console.log('esperando...')
+execPromise()
+console.log('esperando...')
+
+import axios from 'axios'
+
+class Api{
+    static async getUser(nome){
+        try{
+            const response = await axios.get(`http://api.github.com/users/${nome}`)
+            console.log(response)
+        }catch(err){
+            console.warn(err)
+        }
+           
+    }
+}
+
+Api.getUser('Marcus0907')
+ */
+
+// Ex1 Funão delay aciona o .then após 1s
+/* const delay = () => new Promise(resolve => setTimeout(resolve, 1000)); */
+
+    /* function umPorSegundo() {
+        delay().then(() => {
+
+            console.log('1s');
+            delay().then(() => {
+
+                console.log('2s');
+                delay().then(() => {
+
+                    console.log('3s');
+                });
+            })
+        });
+    }
+
+
+ */
+
+/* async function umPorSegundo(){
+    await delay()
+    console.log('1s')
+    await delay()
+    console.log('2s')
+    await delay()
+    console.log('3s')
+    
+}
+
+umPorSegundo();
+ */
+
+//ex2
+
+
+import axios from 'axios';
+
+/* function getUserFromGithub(user) {
+    axios.get(`https://api.github.com/users/${user}`)
+    .then(response => {
+        console.log(response.data);
+    })
+    .catch(err => {
+        console.log('Usuário não existe');
+    })
+} */
+
+/* async function getUserFromGithub(user){
+    try{
+        const response = await axios.get(`https://api.github.com/users/${user}`)
+        console.log(response)
+    }catch(err){
+        console.log(err)
+    }
+    
+}
+
+getUserFromGithub('Marcus0907');
+getUserFromGithub('diego3g124123');
+ */
+
+
+
+

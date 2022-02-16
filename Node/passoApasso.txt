@@ -1,0 +1,56 @@
+node - runtime javascript compiler
+yarn - gerenciador de pacotes
+
+1 - yarn init - gera o package json
+2 - yarn add - instala dependecias 
+3 - yarn add @babel/cli - fornece comandos, cria node modules e yarn.lock
+4 - yarn add @babel/preset-env - indica o codigo deve ser traduzido para navegadores. Poderia ser para outra finalidade
+5 - yarn.lock - nunca precisa mexer
+6 - node_module - armazena todas as dependencias
+7 - .gitignore - nao sobre para o git os arquivos e pastas que tiverem la
+8 - .babelrc - "compila" arquivos que usam es5, es5... Para um arquivo js que todos os navegadores entendam
+9 - 
+"scripts": {
+    "dev": "babel ./main.js -o ./bundle.js"
+  }
+  serve para criar scripts, ao rodar yarn dev, tudo o que tiver no main.js vai ter compilado para um bundle.js
+
+  10 - yarn add @babel/core
+  11- yarn dev - roda o codigo
+
+
+
+  WEBPACK SERVER
+
+  1 - permite que seja utilizados varios arquivos e pastas em um projeto, que no final resulta em um unico arquivo bundle.js
+  2 - yarn add webpack webpack-cli -D - para instalar os servicoes
+  3 - 
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  o babel so eh util durante o desenvolvimento dos projeto, por isso ele nao deve ser considerado uma dependencia.
+  a mesma coisa acontece com o webpack
+
+  4 - webpack.config.js - arquivo de configuracao do webpack
+  5 - yarn add babel-loader -D - usando o bable-loader dentro do webpack.
+  6 - 
+   "scripts": {
+    "dev": "webpack --mode=development -w"
+  }
+  agora utiliza-se o webpack que usa a funcao babel-loader e compila todos os arquivos de todas as pastas com extencao js em um unico arquivo bundle
+
+    WEBPACK SERVER
+
+    - serve para gerar um servidor 
+
+     "scripts": {
+        "dev": "webpack-dev-server --mode=development"
+      }
+
+  7 - pasta src contera todos os arquivos js que devem ser monitorados
+  8 - pasta public contera todos os arquivos que nao precisam ser monitorados
+  9 - yarn add webpack-dev-server -D = 

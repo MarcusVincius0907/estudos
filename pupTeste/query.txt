@@ -1,0 +1,5 @@
+insert into funcionario ( func_cod, func_nome, func_endereco, func_rg, func_cpf, func_estado_civil ) values 
+(1, 'Camila Eliane Silveira', 'Rua Itapoá', '47.218.430-1', '82577896077', 'solteiro'), 
+(2, 'Lorenzo Caio Henry Carvalho', 'Rua Rosado Pereira', '29.397.166-3', '47675866827', 'solteiro'), 
+(3, 'Iago Carlos Teixeira', 'Rua Nossa Senhora Aparecida', '16.122.843-4', '29397994077', 'solteiro'), 
+(4, 'Alícia Isis da Mata', 'Rua José Sebastião da Silva', '13.712.262-7', '52024109055', 'solteiro'), 

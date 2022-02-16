@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+
+        </head>
+
+        <body>
+
+            <div class="2" id="1" onclick="exibir()"> click</div>
+            <div class="2" id="2" onclick="exibir()"> me</div>
+            <button>hi there</button>
+            <input type="text">
+            <div id="content"></div>
+
+            <div id="box"></div>
+
+            <button id="btnEx" onclick="criarCaixa()">crie uma nova caixa</button>
+            <div id="containerEx"></div>
+
+            <input type="text" id="inputEx2">
+            <button id="btnEx2" onclick="addLista()">Adicionar</button>
+            <button id="btn2Ex2">show</button>
+            <ul id="listaEx2"></ul>
+
+            <script>
+                //variaveis
+                var aluno = {
+                    nome: "marcus",
+                    idade: 18
+                }
+
+                var aluno2 = {
+                    ...aluno,
+                    idade:20
+                }
+               
+
+                console.log(aluno, aluno2)
+
+                //variaveis
+
+
+                //funcoes
+
+                function exibir(){
+                    console.log("hello")
+                }
+
+                //funcoes
+
+                //setInterval(exibir,1000) setTimeout(exibir,1000)
+
+
+
+
+                //recebendo elementos da dom
+
+                var div = document.getElementsByClassName('2')
+
+                var btn = document.querySelector('button')
+
+                var input = document.querySelector('input')
+
+                //recebendo elementos da dom
+
+
+                //emitindo elementos da dom
+
+                btn.onclick = function(){
+                    var text = input.value
+                    alert(text)
+                    alert('fala boi')
+                }
+
+                console.log(btn)
+
+                //emitindo elementos da dom
+
+
+                //criar, inserir e remover tags na dom 
+
+                var link = document.createElement('a')
+                link.setAttribute('href','http://www.google.com')
+                
+                var text = document.createTextNode('clique aqui para acessar o google')
+                link.appendChild(text)
+
+                var container = document.querySelector('div#content')
+                container.appendChild(link)
+
+                //criar, inserir e remover tags na dom 
+
+                //inserindo estilo
+
+                var box = document.querySelector('#box')
+                box.style.height = '100px'
+                box.style.width = '100px'
+                box.style.backgroundColor = 'black'
+
+                var box1 = document.createElement('box1')
+                box1.style.width = '50px'
+                box1.style.height = '50px'
+                box1.style.backgroundColor = 'white'
+                box1.style.position = 'absolute'
+
+                box.appendChild(box1)
+
+                //inserindo estilo
+
+                //exercicio 1
+
+                function criarCaixa(){
+
+                    var novaCaixa = document.createElement('div')
+                    var container = document.querySelector('#containerEx')
+                    novaCaixa.setAttribute('class','teste')
+                    novaCaixa.style.height = '200px'
+                    novaCaixa.style.width = '200px'
+                    novaCaixa.style.backgroundColor = 'blue'
+
+                    container.appendChild(novaCaixa)
+
+
+
+
+                }
+
+                //exercicio
+
+                //exercicio 2
+
+                var nomes = []
+                var ul = document.querySelector('#listaEx2')
+                var btn2 = document.querySelector('#btn2Ex2')
+
+                function addLista(){
+                    
+                    var input = document.querySelector('#inputEx2')
+                    var nome = input.value
+
+                    nomes.push(nome)
+                    console.log(nomes)
+
+                    input.value = ''
+
+                    var li = document.createElement('li')
+                    nome = document.createTextNode(nome)
+                    li.appendChild(nome)
+                    ul.appendChild(li)
+
+                    
+                }
+
+               
+
+                
+                //exercicio 2
+
+            </script>
+        </body>
+    </html>

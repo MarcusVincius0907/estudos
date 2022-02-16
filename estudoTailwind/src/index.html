@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class=" bg-red-300">
+    <div class="grid grid-cols-1 lg:grid-cols-2 ">
+
+        <div class="bg-gray-600 lg:min-h-screen lg:flex lg:items-center p-8 sm:p-12 ">
+            
+            <div class="flex-grow">
+                <h1 class="text-white text-center text-2xl">
+                    Seja bem vindo!
+                </h1>
+                <p class="text-center text-xl text-gray-300 py-2">
+                    É um prazer ter você de volta.
+                </p>
+            </div>
+            
+        </div>
+        <div class="flex justify-center lg:h-screen lg:flex lg:items-center  p-12 ">
+            <!-- card -->
+            <div class="flex-grow max-w-3xl bg-white shadow-xl rounded-md p-8 items-center ">
+                
+                <div class="grid items-center justify-center w-9/12 m-auto">
+                    <div class="flex min-w-full items-center mb-8 justify-center">
+                        <h2 class="text-gray-600 text-2xl text-center">Entre com seus dados</h2>
+                    </div>
+                    <form class="text-gray-600 text-xl">
+                        <div class="grid  py-1" >
+                            <label for="email">Email:</label>
+                            <input class="bg-gray-300 rounded-md outline-none py-2 px-4 text-lg" type="email" name="email">
+                        </div>
+                        <div class="grid py-1">
+                            <label for="senha">Senha:</label>
+                            <input class="bg-gray-300 rounded-md outline-none py-2 px-4 text-lg" type="password" name="senha">
+                        </div>
+                        <div class="flex justify-center mt-5">
+                            <button class="bg-gray-600 text-white py-2 px-4 rounded-md">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #login, #id{
+            height: 30px;
+            width: 200px;
+            background-color: blueviolet;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="login"></div>
+    <div id="id"></div>
+    <img id="img" height="300px" width="300px"></div>
+
+    <script>
+        $(document).ready(function(){
+
+            var login = $('#login');
+
+            var id = $('#id');
+
+            var img = $('#img');
+
+            $.get('https://api.github.com/users/Marcus0907', function(data,status){
+                console.log(data, status)
+                login.text(data.login);
+                id.text(data.id)
+                img.attr('src','https://avatars2.githubusercontent.com/u/34544238?v=4')
+            })
+
+            $.post('http://localhost:3000/posts', {'Teste':'Teste'},function(){
+                console.log('post complete')
+            })
+
+        })
+    </script>
+</body>
+</html>

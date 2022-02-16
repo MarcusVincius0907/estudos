@@ -1,0 +1,15 @@
+const initialValue = {
+    newValue: 'tem coisa'
+};
+
+export const clickReducer = (state = initialValue, action ) => {
+    switch(action.type){
+        case 'CLICK_UPDATE_VALUE':
+            return  {
+                ...state,
+                newValue: action.newValue
+            }
+        default :
+            return state;    
+    }
+}

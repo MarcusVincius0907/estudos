@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">aula1</a>
+        <a href="index2.html">aula2</a>
+        <a href="index3.html">aula3</a>
+        <a href="index4.html">aula4</a>
+    </nav>
+    
+    <div id="divTest">hello word</div>
+
+    <div id="divTest2">tenho um</div>
+
+    <div id="divTest3">Clique aqui</div>
+
+
+    
+    <script>
+        //codigo que carrega apos a renderizacao de todos os elementos do dom
+        $(document).ready(function () {
+
+            console.log("jquery funcionando")
+
+            $('div').css('backgroundColor', '#8b8ba7');
+            $('#divTest').hide()
+            $('#divTest').delay('2000')
+            $('#divTest').fadeIn('slow')
+
+            $('#divTest2')
+                .hide()
+                .delay('2000')
+                .fadeIn('slow')
+                .text('tenho 2 agora')
+
+            $('#divTest3').click(function () {
+
+                $('div').css({ backgroundColor: 'aqua', height: '200px' })
+            })
+
+            console.log($('div'))
+
+            $('*').css('padding', '10px')
+            //aplica uma config em todos os elementos
+
+
+            $('#divTest,#divTest2,#divTest3').css('width', '200px')
+            //aplicando config em mais de um elemento
+
+        })
+
+        //sintaxe diferente para  $(document).ready(function()
+        $(function () {
+            //alert("jquery2 working")
+        })
+    </script>
+</body>
+
+</html>
